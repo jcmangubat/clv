@@ -5,6 +5,7 @@ import React from "react";
 import RandomRotatedDiv from "./RandomRotateDiv";
 import BouncingRotatedDiv from "./BouncingRotateDiv";
 import { Badge } from "./ui/badge";
+import { Link } from "react-router-dom";
 
 function HeroSection() {
   return (
@@ -50,7 +51,7 @@ function HeroSection() {
 
             {/* Accreditation Badges */}
             <div className="mt-5 flex flex-wrap items-center gap-4">
-              <a href="/certificates" className="cursor-pointer">
+              <Link to="/certificates" className="cursor-pointer">
                 <Badge
                   variant="secondary"
                   className="gap-2 px-4 py-2 shadow-md hover:shadow-xl transition hover:scale-105 cursor-pointer"
@@ -62,9 +63,9 @@ function HeroSection() {
                   />
                   <span>DOH Licensed</span>
                 </Badge>
-              </a>
+              </Link>
 
-              <a href="/certificates" className="cursor-pointer">
+              <Link to="/certificates" className="cursor-pointer">
                 <Badge
                   variant="secondary"
                   className="gap-2 px-4 py-2 shadow-md hover:shadow-xl transition hover:scale-105 cursor-pointer"
@@ -76,9 +77,9 @@ function HeroSection() {
                   />
                   <span>ISO 15189 Accredited</span>
                 </Badge>
-              </a>
+              </Link>
 
-              <a href="/certificates" className="cursor-pointer">
+              <Link to="/certificates" className="cursor-pointer">
                 <Badge
                   variant="secondary"
                   className="gap-2 px-4 py-2 shadow-md hover:shadow-xl transition hover:scale-105 cursor-pointer"
@@ -90,8 +91,9 @@ function HeroSection() {
                   />
                   <span>PhilHealth Accredited</span>
                 </Badge>
-              </a>
-              <a href="/certificates" className="cursor-pointer">
+              </Link>
+
+              <Link to="/certificates" className="cursor-pointer">
                 <Badge
                   variant="secondary"
                   className="gap-2 px-4 py-2 shadow-md hover:shadow-xl transition hover:scale-105 cursor-pointer"
@@ -103,7 +105,7 @@ function HeroSection() {
                   />
                   <span>ISO 9001 Certified</span>
                 </Badge>
-              </a>
+              </Link>
             </div>
           </div>
         </motion.div>
