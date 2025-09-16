@@ -13,7 +13,7 @@ function HeroSection() {
       <div
         className="absolute inset-0 bg-cover bg-center mix-blend-lighten opacity-30"
         style={{
-          backgroundImage: "url('/assets/images/central-lab-002.jpg')",
+          backgroundImage: "url('/assets/images/central-lab-001.jpg')",
         }}
       />
 
@@ -116,12 +116,11 @@ function HeroSection() {
                     Accurate & Reliable Results
                   </h4>
                   <p className="text-gray-600 text-sm">
-                    To have become{" "}
-                    <strong>
-                      DOH-Certified Labs with ISO 15189 Compliance
-                    </strong>
-                    , our advanced testing ensures precision and consistency,
-                    giving you results you can trust every time.
+                    As a <strong>DOH-certified laboratory with ISO 15189 compliance</strong>, we
+                    uphold the highest standards of accuracy and reliability.
+                    Our advanced technology and strict quality practices ensure
+                    precise, consistent results you can trust for confident
+                    decision-making.
                   </p>
                 </div>
               </motion.div>

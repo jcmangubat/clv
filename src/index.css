@@ -86,14 +86,6 @@
 }
 
 @layer utilities {
-  /* .gradient-bg {
-    background: linear-gradient(135deg, hsl(221.2, 83.2%, 53.3%) 0%, hsl(194, 100%, 36%) 50%, hsl(262.1, 83.3%, 57.8%) 100%);
-  }
-
-  .dark .gradient-bg {
-    background: linear-gradient(135deg, hsl(217.2, 91.2%, 59.8%) 0%, hsl(194, 100%, 46%) 50%, hsl(262.1, 83.3%, 67.8%) 100%);
-  } */
-
   .gradient-bg {
     background: linear-gradient(
       135deg,
@@ -101,8 +93,11 @@
       hsl(194, 100%, 36%) 50%,
       hsl(262.1, 83.3%, 57.8%) 100%
     );
+    background-size: 400% 400%; /* larger than the element for smooth rotation */
+    animation: rotateGradient 5s linear infinite; /* adjust duration */
   }
 
+  /* Dark theme */
   .dark .gradient-bg {
     background: linear-gradient(
       135deg,
@@ -110,6 +105,21 @@
       hsl(194, 100%, 46%) 50%,
       hsl(262.1, 83.3%, 67.8%) 100%
     );
+    background-size: 400% 400%;
+    animation: rotateGradient 5s linear infinite;
+  }
+
+  /* Keyframes for rotation */
+  @keyframes rotateGradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
 
   .stats-card {
@@ -143,22 +153,19 @@
 }
 
 .hero .hero-content .trust-badges {
-    display: flex
-;
-    gap: 1.5rem;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .trust-badges .badge-item {
-    display: flex
-;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    background: 
- color-mix(in srgb, var(--accent-color), transparent 90%);
-    border-radius: 50px;
-    color: var(--accent-color);
-    font-size: 0.875rem;
-    font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: color-mix(in srgb, var(--accent-color), transparent 90%);
+  border-radius: 50px;
+  color: var(--accent-color);
+  font-size: 0.875rem;
+  font-weight: 500;
 }

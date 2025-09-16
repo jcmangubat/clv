@@ -1,0 +1,271 @@
+.testimonials {
+  position: relative;
+  color: var(--dark-color);
+}
+
+/* Overlay for better text readability on background image */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.light {
+  color: var(--light-color) !important;
+}
+
+.underline {
+  width: 60px; /* slightly smaller */
+  height: 3px;
+  background-color: var(--primary-color);
+  margin-top: 8px;
+}
+
+/* Review Card Styles */
+.reviewCard {
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(255, 255, 255, 0.85)
+  );
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  height: 100%;
+  position: relative;
+}
+
+.reviewCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* Card Header */
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.projectInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.projectIcon {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+}
+
+.projectName {
+  font-size: 16px; /* reduced */
+  font-weight: 600;
+  margin: 0;
+  color: var(--dark-color);
+}
+
+.reviewDate {
+  font-size: 10px; /* reduced */
+  color: #666;
+}
+
+.verifiedBadge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: rgba(0, 128, 0, 0.1);
+  color: green;
+  font-size: 12px; /* reduced */
+  font-weight: 600;
+  padding: 3px 6px;
+  border-radius: 12px;
+}
+
+.verifiedBadge span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  background-color: green;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+}
+
+/* Rating */
+.ratingContainer {
+  padding: 12px 16px 8px;
+}
+
+.rating {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  color: #ddd;
+  font-size: 16px; /* reduced */
+}
+
+.star.filled {
+  color: #ffc107;
+}
+
+/* Review Content */
+.reviewContent {
+  padding: 8px 16px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.reviewText {
+  font-style: italic;
+  color: var(--dark-color);
+  margin: 0;
+  font-size: 16px; /* reduced */
+  line-height: 1.4; /* slightly tighter */
+  position: relative;
+}
+
+.reviewText::before {
+  content: '"';
+  font-size: 40px; /* reduced */
+  color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: -15px;
+  left: -12px;
+  font-family: Georgia, serif;
+}
+
+/* Author Info */
+.authorInfo {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.authorAvatar {
+  width: 40px; /* smaller */
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px; /* reduced */
+  font-weight: 600;
+  margin-right: 12px;
+}
+
+.authorDetails {
+  flex-grow: 1;
+}
+
+.authorName {
+  font-weight: 600;
+  color: var(--dark-color);
+  margin: 0;
+  font-size: 14px; /* reduced */
+}
+
+.authorPosition {
+  font-size: 11px; /* reduced */
+  color: #666;
+  margin: 0;
+}
+
+.sourceInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.sourceIcon {
+  font-size: 16px; /* reduced */
+}
+
+.sourceText {
+  font-size: 10px; /* reduced */
+  color: #666;
+}
+
+/* Swiper Custom Styles */
+#testimonials .swiper-pagination-bullet {
+  background-color: var(--light-color);
+  opacity: 0.5;
+  width: 8px; /* smaller */
+  height: 8px;
+}
+
+#testimonials .swiper-pagination-bullet-active {
+  background-color: var(--primary-color);
+  opacity: 1;
+  width: 20px; /* smaller */
+  border-radius: 4px;
+}
+
+#testimonials .swiper-button-next,
+#testimonials .swiper-button-prev {
+  color: var(--primary-color);
+}
+
+#testimonials .swiper-button-next:after,
+#testimonials .swiper-button-prev:after {
+  font-size: 20px; /* slightly smaller */
+  font-weight: bold;
+}
+
+/* Left pattern for testimonials */
+#testimonials .left-pattern::before {
+  background-color: var(--primary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .reviewCard {
+    margin-bottom: 16px;
+  }
+
+  .authorInfo {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .authorAvatar {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+
+  .sourceInfo {
+    flex-direction: row;
+    margin-top: 8px;
+  }
+
+  .reviewText {
+    font-size: 14px; /* smaller on mobile */
+  }
+}

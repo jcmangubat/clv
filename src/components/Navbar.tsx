@@ -81,7 +81,7 @@ export default function Navbar() {
               <a href="#" className="text-yellow-50 hover:text-blue-500">
                 <FaXTwitter className="h-5 w-5" />
               </a>
-              <a href="#" className="text-yellow-50 hover:text-blue-600">
+              <a href="https://www.facebook.com/CentralLabDavao" className="text-yellow-50 hover:text-blue-600">
                 <FaFacebookF className="h-5 w-5" />
               </a>
               <a href="#" className="text-yellow-50 hover:text-pink-500">

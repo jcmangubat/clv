@@ -17,6 +17,7 @@ import ServicesPreview from "@/components/ServicesPreview";
 import SolutionsPreview from "@/components/SolutionsPreview";
 import DepartmentsSection from "@/components/DepartmentsSection";
 import CommunityCarePreview from "@/components/CommunityCarePreview";
+import ReviewsSection from "@/components/ReviewsSection";
 
 export default function Home() {
   return (
@@ -31,6 +32,8 @@ export default function Home() {
 
       {/* Solutions Preview */}
       <SolutionsPreview />
+
+      <ReviewsSection />
 
       {/* Departments Section */}
       <DepartmentsSection />
