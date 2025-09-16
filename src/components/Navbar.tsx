@@ -23,9 +23,9 @@ export default function Navbar() {
     { name: "Services", href: "/services" },
     { name: "Solutions", href: "/solutions" },
     { name: "Leadership & Specialists", href: "/team" },
+    { name: "Accreditations", href: "/certificates" },
     { name: "Partners", href: "/partners" },
-    { name: "Insights", href: "/insights" },
-    { name: "Careers", href: "/careers" },
+    { name: "Blogs", href: "/insights" },
     { name: "Contact", href: "/contact" },
   ];
 

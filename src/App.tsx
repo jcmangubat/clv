@@ -17,6 +17,7 @@ import NotFound from "@/pages/not-found";
 import KonsultaPage from "./pages/PhilHealthKonsultaPage";
 import LingapPage from "./pages/LingapPage";
 import TeamPage from "./pages/TeamPage";
+import AccreditationsPage from "./pages/AccreditationsPage";
 
 function App() {
   return (
@@ -36,7 +37,12 @@ function App() {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/community/lingap" element={<LingapPage />} />
                 <Route path="/community/konsulta" element={<KonsultaPage />} />
+                <Route path="/certificates" element={<AccreditationsPage />} />
                 <Route path="/team" element={<TeamPage />} />
+                <Route
+                  path="/accreditations"
+                  element={<AccreditationsPage />}
+                />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Layout>

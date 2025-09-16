@@ -4,6 +4,7 @@ import CountUp from "react-countup";
 import React from "react";
 import RandomRotatedDiv from "./RandomRotateDiv";
 import BouncingRotatedDiv from "./BouncingRotateDiv";
+import { Badge } from "./ui/badge";
 
 function HeroSection() {
   return (
@@ -32,27 +33,85 @@ function HeroSection() {
           <div className="text-left mb-12">
             <h1
               className="text-9xl md:text-6xl font-extrabold text-gray-50 
-               drop-shadow-[0_4px_6px_rgba(0,0,0,0.6)] 
-               dark:drop-shadow-[0_0_15px_rgba(59,130,246,0.6)]"
+       drop-shadow-[0_4px_6px_rgba(0,0,0,0.6)] 
+       dark:drop-shadow-[0_0_15px_rgba(59,130,246,0.6)]"
             >
               WELCOME TO CENTRAL LAB
             </h1>
             <p
               className="mt-2 text-3xl text-blue-100 
-               drop-shadow-[0_2px_4px_rgba(0,0,0,0.7)] 
-               dark:drop-shadow-[0_0_10px_rgba(139,92,246,0.6)]"
+       drop-shadow-[0_2px_4px_rgba(0,0,0,0.7)] 
+       dark:drop-shadow-[0_0_10px_rgba(139,92,246,0.6)]"
             >
               We are your Trusted Lab Partner in Davao City
               <br /> We are innovating scientific solutions to give you accurate
               diagnostic services.
             </p>
+
+            {/* Accreditation Badges */}
+            <div className="mt-5 flex flex-wrap items-center gap-4">
+              <a href="/accreditations" className="cursor-pointer">
+                <Badge
+                  variant="secondary"
+                  className="gap-2 px-4 py-2 shadow-md hover:shadow-xl transition hover:scale-105 cursor-pointer"
+                >
+                  <img
+                    src="/assets/badges/doh.png"
+                    alt="DOH Licensed"
+                    className="w-5 h-5 object-contain"
+                  />
+                  <span>DOH Licensed</span>
+                </Badge>
+              </a>
+
+              <a href="/accreditations" className="cursor-pointer">
+                <Badge
+                  variant="secondary"
+                  className="gap-2 px-4 py-2 shadow-md hover:shadow-xl transition hover:scale-105 cursor-pointer"
+                >
+                  <img
+                    src="/assets/badges/ISO-15189.png"
+                    alt="DOH Licensed"
+                    className="w-5 h-5 object-contain"
+                  />
+                  <span>ISO 15189 Accredited</span>
+                </Badge>
+              </a>
+
+              <a href="/accreditations" className="cursor-pointer">
+                <Badge
+                  variant="secondary"
+                  className="gap-2 px-4 py-2 shadow-md hover:shadow-xl transition hover:scale-105 cursor-pointer"
+                >
+                  <img
+                    src="/assets/badges/Philhealth-logo.png"
+                    alt="PhilHealth Accredited"
+                    className="w-5 h-5 object-contain"
+                  />
+                  <span>PhilHealth Accredited</span>
+                </Badge>
+              </a>
+              <a href="/accreditations" className="cursor-pointer">
+                <Badge
+                  variant="secondary"
+                  className="gap-2 px-4 py-2 shadow-md hover:shadow-xl transition hover:scale-105 cursor-pointer"
+                >
+                  <img
+                    src="/assets/badges/iso-9001.png"
+                    alt="ISO 9001 Certified"
+                    className="w-5 h-5 object-contain"
+                  />
+                  <span>ISO 9001 Certified</span>
+                </Badge>
+              </a>
+            </div>
           </div>
         </motion.div>
 
         {/* Content Grid */}
         <div className="grid lg:grid-cols-12 gap-6">
           {/* Why Choose Box */}
-          <div className="lg:col-span-4 flex">
+          <div className="lg:col-span-4 flex hover:scale-105">
             <motion.div
               initial={{ scale: 0.25 }}
               animate={{ scale: 1 }}
@@ -108,7 +167,7 @@ function HeroSection() {
                 animate={{ scale: 1 }}
                 transition={{ type: "spring", stiffness: 50 }}
               >
-                <div className="bg-white rounded-lg shadow-md p-6 text-center">
+                <div className="bg-white rounded-lg shadow-md p-6 text-center hover:scale-105">
                   <div className="text-blue-600 mb-4 flex justify-center">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -147,7 +206,7 @@ function HeroSection() {
                 animate={{ scale: 1 }}
                 transition={{ type: "spring", stiffness: 50 }}
               >
-                <div className="bg-white rounded-lg shadow-md p-6 text-center">
+                <div className="bg-white rounded-lg shadow-md p-6 text-center hover:scale-105">
                   <div className="text-blue-600 mb-4 flex justify-center">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -182,7 +241,7 @@ function HeroSection() {
                 animate={{ scale: 1 }}
                 transition={{ type: "spring", stiffness: 50 }}
               >
-                <div className="bg-white rounded-lg shadow-md p-6 text-center">
+                <div className="bg-white rounded-lg shadow-md p-6 text-center hover:scale-105">
                   <div className="text-blue-600 mb-4 flex justify-center">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
