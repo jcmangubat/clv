@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { Card, CardContent } from "./ui/card";
 import CountUp from "react-countup";
 import React from "react";
+import RandomRotatedDiv from "./RandomRotateDiv";
+import BouncingRotatedDiv from "./BouncingRotateDiv";
 
 function HeroSection() {
   return (
@@ -9,7 +11,10 @@ function HeroSection() {
       className="relative flex items-center bg-blue-50"
       style={{ paddingTop: "60px", paddingBottom: "60px" }}
     >
-      <div className="absolute inset-0 gradient-bg" />
+      <div className="absolute inset-0 overflow-hidden gradient-bg">
+        {/* <RandomRotatedDiv /> */}
+        <BouncingRotatedDiv />
+      </div>
       <div
         className="absolute inset-0 bg-cover bg-center mix-blend-lighten opacity-30"
         style={{
@@ -25,10 +30,18 @@ function HeroSection() {
           transition={{ type: "spring", stiffness: 50 }}
         >
           <div className="text-left mb-12">
-            <h1 className="text-9xl md:text-6xl font-extrabold text-gray-50">
+            <h1
+              className="text-9xl md:text-6xl font-extrabold text-gray-50 
+               drop-shadow-[0_4px_6px_rgba(0,0,0,0.6)] 
+               dark:drop-shadow-[0_0_15px_rgba(59,130,246,0.6)]"
+            >
               WELCOME TO CENTRAL LAB
             </h1>
-            <p className="mt-2 text-3xl text-blue-100">
+            <p
+              className="mt-2 text-3xl text-blue-100 
+               drop-shadow-[0_2px_4px_rgba(0,0,0,0.7)] 
+               dark:drop-shadow-[0_0_10px_rgba(139,92,246,0.6)]"
+            >
               We are your Trusted Lab Partner in Davao City
               <br /> We are innovating scientific solutions to give you accurate
               diagnostic services.
@@ -116,11 +129,14 @@ function HeroSection() {
                     Accurate & Reliable Results
                   </h4>
                   <p className="text-gray-600 text-sm">
-                    As a <strong>DOH-certified laboratory with ISO 15189 compliance</strong>, we
-                    uphold the highest standards of accuracy and reliability.
-                    Our advanced technology and strict quality practices ensure
-                    precise, consistent results you can trust for confident
-                    decision-making.
+                    As a{" "}
+                    <strong>
+                      DOH-certified laboratory with ISO 15189 compliance
+                    </strong>
+                    , we uphold the highest standards of accuracy and
+                    reliability. Our advanced technology and strict quality
+                    practices ensure precise, consistent results you can trust
+                    for confident decision-making.
                   </p>
                 </div>
               </motion.div>

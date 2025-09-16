@@ -211,7 +211,7 @@ const ReviewsSection = () => {
 
   return (
     <section
-      className="relative flex items-center bg-blue-50"
+      className="relative flex items-center bg-background"
       style={{ paddingTop: "60px", paddingBottom: "60px" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -225,7 +225,7 @@ const ReviewsSection = () => {
           >
             <motion.h2
               variants={fadeInUp}
-              className="text-3xl md:text-4xl font-bold mb-4"
+              className="text-3xl md:text-4xl font-bold mb-4 text-foreground"
             >
               Client Reviews
             </motion.h2>
@@ -237,37 +237,15 @@ const ReviewsSection = () => {
             </motion.p>
           </motion.div>
 
-          {/* <div
-            className="section-header offset-lg-4"
-            style={{
-              textShadow: "rgb(0, 0, 0) 1px 1px 2px",
-            }}
-          >
-            <h2 className={`${styles.light} text-uppercase mb-3 left-pattern`}>
-              Client Reviews
-            </h2>
-            <h3 className={`${styles.light} text-uppercase`}>
-              What our clients say
-            </h3>
-          </div> */}
-
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={10}
-            slidesOffsetBefore={0} // space before first card
-            slidesOffsetAfter={0} // space after last card
             navigation={{
               nextEl: ".swiper-button-next",
               prevEl: ".swiper-button-prev",
             }}
-            autoplay={{
-              delay: 5000,
-              disableOnInteraction: false,
-            }}
-            pagination={{
-              clickable: true,
-              dynamicBullets: true,
-            }}
+            autoplay={{ delay: 5000, disableOnInteraction: false }}
+            pagination={{ clickable: true, dynamicBullets: true }}
             keyboard={{ enabled: true }}
             breakpoints={{
               320: { slidesPerView: 1 },
@@ -279,16 +257,21 @@ const ReviewsSection = () => {
           >
             {clientReviews.map((review) => (
               <SwiperSlide key={review.id}>
-                <div className={`${styles.reviewCard} h-100`}>
-                  {/* Card Header with Project Info */}
-                  <div className={styles.cardHeader}>
+                <div
+                  className={`${styles.reviewCard} bg-card text-foreground border border-border`}
+                >
+                  <div className={`${styles.cardHeader} bg-muted`}>
                     <div className={styles.projectInfo}>
-                      <span className={styles.projectIcon}>🏗️</span>
+                      <span
+                        className={`${styles.projectIcon} bg-primary text-primary-foreground`}
+                      >
+                        🩺
+                      </span>
                       <div>
-                        <h4 className={styles.projectName}>
-                          {review.projectName}
-                        </h4>
-                        <span className={styles.reviewDate}>{review.date}</span>
+                        <h4 className="font-semibold">{review.projectName}</h4>
+                        <span className="text-xs text-muted-foreground">
+                          {review.date}
+                        </span>
                       </div>
                     </div>
                     <div className={styles.verifiedBadge}>
@@ -296,34 +279,29 @@ const ReviewsSection = () => {
                     </div>
                   </div>
 
-                  {/* Rating */}
-                  <div className={styles.ratingContainer}>
+                  <div className={`${styles.ratingContainer} dark:bg-gray-500`}>
                     {renderRating(review.rating)}
                   </div>
 
-                  {/* Review Content */}
-                  <div className={styles.reviewContent}>
-                    <blockquote className={styles.reviewText}>
+                  <div className="p-4 dark:bg-gray-500">
+                    <blockquote className="italic text-amber-600-foreground bg-transparent rounded-lg p-3">
                       "{review.review}"
                     </blockquote>
                   </div>
 
-                  {/* Author Info */}
-                  <div className={styles.authorInfo}>
-                    <div className={styles.authorAvatar}>
+                  <div className="flex items-center p-4 bg-muted">
+                    <div className="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-primary-foreground font-bold mr-3">
                       {review.author.charAt(0)}
                     </div>
-                    <div className={styles.authorDetails}>
-                      <div className={styles.authorName}>{review.author}</div>
-                      <div className={styles.authorPosition}>
+                    <div className="flex-grow">
+                      <div className="font-semibold">{review.author}</div>
+                      <div className="text-xs text-muted-foreground">
                         {review.position}
                       </div>
                     </div>
-                    <div className={styles.sourceInfo}>
-                      <span className={styles.sourceIcon}>
-                        {getSourceIcon(review.source)}
-                      </span>
-                      <span className={styles.sourceText}>{review.source}</span>
+                    <div className="flex flex-col items-center gap-1 text-xs text-muted-foreground">
+                      <span>{getSourceIcon(review.source)}</span>
+                      <span>{review.source}</span>
                     </div>
                   </div>
                 </div>
@@ -331,7 +309,6 @@ const ReviewsSection = () => {
             ))}
           </Swiper>
 
-          {/* Custom Navigation Buttons */}
           <div className="swiper-button-next"></div>
           <div className="swiper-button-prev"></div>
         </div>
