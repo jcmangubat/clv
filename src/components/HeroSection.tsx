@@ -24,7 +24,7 @@ function HeroSection() {
         }}
       />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div className="relative max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         {/* Welcome Heading */}
         <motion.div
           initial={{ scale: 0.1 }}
@@ -111,7 +111,7 @@ function HeroSection() {
         </motion.div>
 
         {/* Content Grid */}
-        <div className="grid lg:grid-cols-12 gap-6">
+        <div className="grid lg:grid-cols-12 gap-4">
           {/* Why Choose Box */}
           <div className="lg:col-span-4 flex hover:scale-105">
             <motion.div
@@ -124,7 +124,7 @@ function HeroSection() {
                 ease: "backOut",
               }}
             >
-              <div className="bg-blue-600 text-white rounded-lg shadow-lg p-8 flex flex-col justify-between w-full">
+              <div className="bg-blue-600 text-white rounded-lg shadow-lg p-6 flex flex-col justify-between w-full">
                 <h3 className="text-3xl lg:text-4xl font-extrabold mb-6 leading-tight">
                   Why Choose Us?
                 </h3>
@@ -134,10 +134,11 @@ function HeroSection() {
                   commitment to accuracy, speed, and innovation, we ensure
                   reliable results that empower better decisions.
                 </p>
-                <div className="text-center mt-auto">
-                  <a
-                    href="#about"
-                    className="inline-flex items-center bg-white/20 hover:bg-white/30 text-white text-sm font-medium px-5 py-2 rounded-full transition"
+                <div className="flex justify-center gap-4 mt-auto">
+                  {/* First button - Learn More */}
+                  <Link
+                    to="/about"
+                    className="inline-flex items-center bg-white/20 hover:bg-white/30 text-white text-sm font-medium px-5 py-2 rounded-full transition transition transform hover:scale-105"
                   >
                     Learn More
                     <svg
@@ -154,7 +155,29 @@ function HeroSection() {
                         d="M9 5l7 7-7 7"
                       />
                     </svg>
-                  </a>
+                  </Link>
+
+                  {/* Second button - Book Appointment (orange) */}
+                  <Link
+                    to="/booking"
+                    className="inline-flex items-center bg-orange-500 hover:bg-orange-600 text-white text-sm font-medium px-5 py-2 rounded-full transition transition transform hover:scale-105"
+                  >
+                    Book Now!
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-4 w-4 ml-2"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </Link>
                 </div>
               </div>
             </motion.div>
@@ -162,7 +185,7 @@ function HeroSection() {
 
           {/* Icon Boxes */}
           <div className="lg:col-span-8 flex items-center">
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
               {/* Card 1 */}
               <motion.div
                 initial={{ scale: 0.25 }}

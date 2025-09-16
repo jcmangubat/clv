@@ -68,7 +68,7 @@ export default function Contact() {
         "Davao del Sur",
       ],
       phone: "+63 (0943) 460 3369",
-      email: "contactus@centrallabventures.com",
+      email: "help@centrallabventures.com",
     },
   ];
 

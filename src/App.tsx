@@ -18,6 +18,7 @@ import KonsultaPage from "./pages/PhilHealthKonsultaPage";
 import LingapPage from "./pages/LingapPage";
 import TeamPage from "./pages/TeamPage";
 import AccreditationsPage from "./pages/AccreditationsPage";
+import CallInBookingPage from "./pages/CallInBookingPage";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
                 <Route path="/community/konsulta" element={<KonsultaPage />} />
                 <Route path="/certificates" element={<AccreditationsPage />} />
                 <Route path="/team" element={<TeamPage />} />
+                <Route path="/booking" element={<CallInBookingPage />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Layout>

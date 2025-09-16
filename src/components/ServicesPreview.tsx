@@ -184,7 +184,7 @@ function ServicesPreview() {
                       className="w-8 h-8 rounded-full border-2 border-white"
                     />
                     <img 
-                      src="https://images.unsplash.com/photo-1537368910025-700350fef46e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
+                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
                       alt="Filipino Clinical Specialist" 
                       className="w-8 h-8 rounded-full border-2 border-white"
                     />
